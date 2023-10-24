@@ -2,8 +2,9 @@ import sys
 sys.path.append('../')
 
 from mysite.asgi import *
-from inventory.models import Type
+from inventory.models import *
 
-query = Type.objects.all()
-print(query)
+query = Category(name='Carpinteria')
+
+query.save()
 
